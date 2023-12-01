@@ -51,4 +51,7 @@ export class FortuneTellerService {
     return this.httpClient.get<any>(`http://localhost:8080/teller/future/${name}/${FortuneTellerService.subscriberId}`).pipe(shareReplay());
   }
 
+  callApi() : Observable<any> {
+    return this.httpClient.post<any>("http://localhost:8080/student/123123", {});
+  }
 }

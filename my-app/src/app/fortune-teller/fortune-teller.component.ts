@@ -24,6 +24,10 @@ export class FortuneTellerComponent {
   }
 
 
+  callapi() {
+    this.fortuneTellerService.callApi().toPromise().then(data => console.log(data))
+  }
+
   reloadPage() {
     location.reload();
   }
